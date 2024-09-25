@@ -16,6 +16,11 @@ body {
     height: 100%;
 }
 
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
 /* Starting Menu Overlay */
 .start-menu-overlay {
     position: fixed;
