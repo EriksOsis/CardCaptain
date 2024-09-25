@@ -131,6 +131,23 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordInput = document.querySelector('password-login');
+
+            // Add a touchstart event for mobile and mousedown for desktop
+            document.addEventListener('touchstart', function (event) {
+                if (!passwordInput.contains(event.target)) {
+                    passwordInput.blur();  // Unfocus the password input
+                }
+            });
+
+            document.addEventListener('mousedown', function (event) {
+                if (!passwordInput.contains(event.target)) {
+                    passwordInput.blur();  // Unfocus the password input
+                }
+            });
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             const howToUseLink = document.getElementById('howToUseLink');
             const howToUseModal = document.getElementById('howToUseModal');
