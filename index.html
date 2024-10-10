@@ -180,6 +180,17 @@
                 }
             };
         });
+
+        const imagesToPreload = ['2_of_diamonds.png', '3_of_clubs.png', '4_of_hearts.png', '5_of_spades.png', '6_of_diamonds.png', '7_of_clubs.png', '8_of_hearts.png', '9_of_spades.png', '10_of_diamonds.png', 'ace_of_diamonds.png', 'jack_of_clubs2.png', 'king_of_hearts2.png', 'queen_of_spades2.png'];
+
+        function preloadImages() {
+            imagesToPreload.forEach((image) => {
+                const img = new Image();
+                img.src = image;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', preloadImages);
     </script>
     <script src="./oldversion.js"></script>
 </body>
